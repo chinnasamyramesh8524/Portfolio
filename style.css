@@ -1,0 +1,367 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  
+  color: white;
+}
+
+/* Header */
+header {
+  background: hwb(0 4% 96%);
+  padding: 1rem 0;
+}
+header .container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo {
+  color: white;
+  font-size: 1.5rem;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+}
+header nav ul li {
+  margin-left: 20px;
+}
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+header nav ul li a:hover {
+  color: #f39c12;
+}
+
+/* Hero */
+.hero {
+  display: flex;
+  align-items: center;
+  margin: 5px auto;
+  justify-content: space-around;
+  border-radius: 10px;
+  padding: 50px 5%;
+  background-color:#333  ;
+  flex-wrap: wrap;
+}
+.hero-text h1 {
+  font-size: 3rem;
+}
+.hero-text span {
+  color: #f39c12;
+}
+.hero-text .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #f39c12;
+  color: white;
+  text-decoration: none;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+.hero-text .social-icons a {
+  color:white;
+  margin: 10px;
+  font-size: 1.5rem;
+  transition: 0.3s;
+}
+.btn:hover {
+  transform: translateY(-5px);
+}
+.hero-text .social-icons a:hover {
+  color: #f39c12;
+}
+.hero-img img {
+  width: 100%;
+  max-width: 250px;
+
+  border-radius: 10%;
+  
+}
+
+/* About */
+.about {
+  height: 450px;
+  color: black;
+  background-color: #c7c5c5;
+  display: flex;
+  align-items: center;
+  margin: 10px auto;
+  border-radius: 10px;
+  justify-content: space-around;
+  padding: 40px 5%;
+  line-height: 1.8;
+  word-spacing: 5px;
+}
+
+.about-img img {
+  width: 100%;
+  background-color: #2f6df6;
+  max-width: 300px;
+  border-radius: 50% 0% 50% 0% ;
+
+  margin: 10px;
+  width: 300px;
+ 
+}
+.about-text span {
+  color: #f39c12;
+}
+.about .btn {
+  background: #f39c12;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* Services */
+.services {
+  background: #333;
+  color:black;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  font-size: medium;
+  margin: 10px auto;
+  text-align: center;
+  padding: 40px 5%;
+}
+.services span {
+  color: #f39c12;
+}
+.service-boxes {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+.service {
+  background: #fff;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  width: 350px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+.service:hover {
+  transform: translateY(-10px);
+}
+
+/* Projects */
+.projects {
+  margin: 20px auto;
+  border-radius: 10px;
+ /* max-width: 1200px; it is box in fix size */
+  text-align: center;
+  padding: 50px 5%;
+  background: #c7c5c5;
+}
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 15px;
+  margin-top: 30px;
+}
+.project-gallery img {
+  width: 100%;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.project-gallery img:hover {
+  transform:translateY(-15px); 
+}
+/* Contact */
+.contact {
+  text-align: center;
+  margin: 10px auto;
+  background-color: #333;
+  border-radius: 10px;
+  padding: 50px 5%;
+}
+.contact span {
+  color: #f39c12;
+}
+.contact form {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+.contact input,
+.contact textarea {
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.contact button {
+  padding: 10px;
+  background: #f39c12;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.contact button:hover {
+  background: #e67e22;
+}
+
+/* Footer */
+footer {
+  background: #111;
+  border-radius: 10px;
+  margin: 10px auto;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 20px;
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+  .hero, .about {
+    flex-direction: column;
+    text-align: center;
+  }
+  header nav ul {
+    flex-direction: column;
+    background: #222;
+    padding: 10px;
+  }
+  header nav ul li {
+    margin: 10px 0;
+  }
+}
+
+
+
+.hero {
+  position: relative;
+ /* min-height: 92vh;  it is image zoomout but box no change */
+
+
+  overflow: hidden;
+  isolation: isolate; /* so pseudo elements layer under content */
+  background: linear-gradient(#333 );
+}
+
+/* Right gradient blob (blue → purple) */
+.hero::before {
+  content: "";
+  position: absolute;
+  right: -18vw;
+  top: -22vh;
+  width: 65vw;
+  height: 140vh;
+  background: linear-gradient(130deg, #2f6df6 1%, #6a3cf4 54%, #8a39f6 100%);
+  /* large rounded “swoop” */
+  border-top-left-radius: 65% 55%;
+  border-bottom-left-radius: 70% 45%;
+  z-index: -2;
+  filter: saturate(1.05);
+}
+
+/* Bottom white wave to mimic the cut-out curve */
+
+
+
+/* ---------- Responsiveness ---------- */
+@media (max-width: 900px) {
+  .hero::before {
+    right: -28vw;
+    width: 100vw;
+    height: 120vh;
+  }
+  .hero::after {
+    width: 80vw;
+    bottom: -20vh;
+  }
+}
+@media (max-width: 560px) {
+  .nav { gap: 16px; font-size: 13px; }
+  .hero-img { width: min(340px, 82vw); transform: translateY(-1%); }
+  .hero::before { right: -40vw; }
+} 
+
+@media(max-width: 768px) {
+  .hero, .about {
+    flex-direction: column;
+    text-align: center;
+  }
+  header nav ul {
+    flex-direction: column;
+    background: #222;
+    padding: 10px;
+  }
+  header nav ul li {
+    margin: 10px 0;
+  }
+}
+@media(max-width: 600px) {
+  .service-boxes {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+
+.info-box h2 {
+      font-size: 20px;
+      padding-top: 20px;
+      color: #111;
+      margin-bottom: 20px;
+      font-weight: bold;
+}
+
+.info-box {
+      font-size: 14px;
+      text-align: center;
+      padding-bottom: 15px;
+      line-height: 1;
+      border-radius: 10px;
+      background-color: #c7c5c5;
+}
+
+.info-box div {
+      margin-bottom: 20px;
+      text-align: center;
+      font-size: 16px;
+      color: #111;
+      font: bold;
+}
+
+.info-box strong {
+      display: block;
+      color: #111;
+      padding-bottom: 10px;
+      padding-top: 13px;
+      margin-bottom: 5px;
+      font-weight: bold;
+}
+
+.info-box span{
+  color: #e67e22;
+}
+
+.info-box i {
+      margin-right: 8px;
+      color: #ffb100;
+}
+
+ @media (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+    }
